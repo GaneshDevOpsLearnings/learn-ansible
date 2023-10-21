@@ -1,0 +1,4 @@
+- name: Calling role
+  hosts: all
+  roles:
+    - first

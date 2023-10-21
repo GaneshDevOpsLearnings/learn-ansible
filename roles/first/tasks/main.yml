@@ -1,0 +1,7 @@
+- name: print the task in role
+  ansible.builtin.debug:
+    msg: message from role
+
+- name: Print URL
+  ansible.builtin.debug:
+    msg: URL == {{URL}}
