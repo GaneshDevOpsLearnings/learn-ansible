@@ -1,0 +1,17 @@
+- name: passing the var from play level
+  hosts: all
+  vars:
+    url: ganesh.com
+  tasks:
+    - name: accessing the vars
+      ansible.builtin.debug:
+        msg: url == {{url}}
+
+- name: passing the variable from diffent file
+  hosts: all
+  vars_files:
+   - var.yml
+  tasks:
+    - name: accessing the vars
+      ansible.builtin.debug:
+        msg: url == {{url}}
