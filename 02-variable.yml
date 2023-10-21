@@ -15,3 +15,19 @@
     - name: accessing the vars
       ansible.builtin.debug:
         msg: url == {{url}}
+
+- name: task level
+  hosts: all
+  tasks:
+    - name: accessing the vars
+      vars:
+        url: task.com
+      ansible.builtin.debug:
+        msg: url == {{url}}
+
+- name: inventory file
+  hosts: all
+  tasks:
+    - name: accessing the vars
+      ansible.builtin.debug:
+        msg: url == {{url}}
