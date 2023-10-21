@@ -1,6 +1,6 @@
 - name: print message
   hosts: all
   tasks:
-    -name: using debug module
+    - name: using debug module
     ansible.builtin.debug:
       msg: "how are you buddy"
