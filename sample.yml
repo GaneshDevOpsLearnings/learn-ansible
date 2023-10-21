@@ -2,5 +2,5 @@
   hosts: all
   tasks:
     - name: using debug module
-    ansible.builtin.debug:
-      msg: "how are you buddy"
+      ansible.builtin.debug:
+        msg: "how are you buddy"
