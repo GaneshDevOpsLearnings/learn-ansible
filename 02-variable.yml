@@ -31,3 +31,13 @@
     - name: accessing the vars
       ansible.builtin.debug:
         msg: url == {{url}}
+
+- name: register
+  hosts: all
+  tasks:
+    - name: register task
+      ansible.builtin.shell: uptime
+      register: out
+    - name: print output
+      ansible.builtin.debug:
+        msg: "{{out.stdout}}"
